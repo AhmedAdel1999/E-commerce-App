@@ -1,0 +1,22 @@
+
+/**
+ * 
+ * http://localhost:5000/user/register+obj  post  for register
+ * http://localhost:5000/user/login+obj  post  for login
+ *  http://localhost:5000/user/infor , get user information
+ * http://localhost:5000/user/addcart+obj patch
+ * http://localhost:5000/api/category+{name:category}+{config} post create
+ * http://localhost:5000/api/category/${id}+{name:category}+{config} put update
+ * http://localhost:5000/api/category/${id}+{config} delete delete
+ * http://localhost:5000/api/category get   get category
+ * http://localhost:5000/api/products?limit=${page*9}&${category}&${sort}&title[regex]=${search} get get products
+ * http://localhost:5000/api/destroy', {public_id: images.public_id},{configg} post destroy img 
+ * http://localhost:5000/api/products/${id},{config}  delete delete product
+ * http://localhost:5000/api/products', {...product, images},{config} post  cretae product
+ * http://localhost:5000/api/products/{product._id}', {...product, images},{config} put  update product
+ * http://localhost:5000/api/upload', formData, {
+                headers: {'content-type': 'multipart/form-data', Authorization: token} post upload image
+   http://localhost:5000/api/payment', {cart, paymentID, address},{config} post
+   http://localhost:5000/api/payment',{config} get
+   http://localhost:5000/user/history',{config} get
+ */

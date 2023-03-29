@@ -1,0 +1,29 @@
+.notfound{
+    width: 100%;
+    padding-top: 100px;
+}
+.notfound div{
+    text-align: center;
+}
+.notfound div h3{
+    color: #000;
+}
+.notfound div h3 svg{
+    font-size: 30px;
+    transform: translateY(-5px);
+}
+.notfound div p{
+    font-size: 20px;
+    font-weight: bold;
+}
+.notfound div button{
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding: 10px;
+    color: #fff;
+    background-color: #555;
+}

@@ -1,0 +1,70 @@
+.products-section{
+    flex-basis: 100%;
+    padding-top: 10px;
+}
+.filtering{
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.filtering div{
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    font-weight: bold;
+    flex-grow: 1;
+}
+.filtering div input,
+.filtering div select{
+    flex-grow: 1;
+    height: 35px;
+}
+.filtering div select{
+    padding: 5px 0px;
+    outline: none;
+}
+.products-section .deleting{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.products-section .deleting input{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+.products-section .deleting button{
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    padding: 5px 20px;
+    background-color: #555;
+    color: #fff;
+    border-radius: 5px;
+}
+.products{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-items: center;
+    gap: 30px 20px;
+    padding: 10px 0px;
+}
+.loadbtn{
+    display: flex;
+    justify-content: center;
+}
+.loadbtn button{
+    border: none;
+    outline: none;
+    background-color: #555;
+    padding: 5px 15px;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 18px;
+    font-weight: bold;
+}

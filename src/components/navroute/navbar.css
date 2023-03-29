@@ -1,0 +1,109 @@
+.navbar-section{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color:rgba(231, 228, 228,0.2);
+    padding: 0px 20px;
+}
+.navbar-section .logo{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    height: 45px;
+    color: #000
+
+}
+.navbar-section .logo a{
+    text-decoration: none;
+    color: inherit;
+}
+.navbar-section .toggel{
+    padding: 0px 20px;
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    height: 45px;
+    color: #000
+}
+.navbar-section .links{
+    list-style-type: none;
+    display: flex;
+    flex-basis: auto;
+    flex-grow: 1;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    transition: all .5s ease-in-out;
+}
+.navbar-section .links li{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0px 5px;
+}
+.navbar-section .links li>a{
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #444;
+    border-radius: 2px;
+}
+.navbar-section .links li>a svg{
+    font-size: 20px;
+}
+.navbar-section .links li>a span{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    color: #fff;
+    font-size: 14px;
+    padding: 0px 4px;
+    border-radius: 50%;
+    transform: translate3d(-4px,-6px,0px);
+}
+.navbar-section .links li>a.active{
+    color: #000;
+}
+
+.navbar-section .links li>a:hover{
+    color: #000;
+}
+.navbar-section .links li>a.add :hover{
+    color: #fff;
+}
+
+@media (max-width:992px){
+.navbar-section{
+    flex-wrap: wrap;
+}
+.navbar-section .links{
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.navbar-section .links li{
+    height: auto;
+    width: 100%;
+    padding: 0px 20px;
+    overflow: hidden;
+}
+.navbar-section .links li a{
+    display: flex;
+    height: 40px;
+    width: 100%;
+    align-items: center;
+    border-radius: 5px;
+}
+ 
+}
