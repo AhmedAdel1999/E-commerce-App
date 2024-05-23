@@ -14,7 +14,7 @@ const ScrollButton = () =>{
     border: "none",
     outline: "none",
     borderRadius: "5px",
-    backgroundColor: "#555",
+    backgroundColor: "#1f2f98",
     color: "#fff",
     fontSize: "18px",
     position: "fixed",
@@ -24,6 +24,7 @@ const ScrollButton = () =>{
   }
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
+    console.log(scrolled)
     if (scrolled > 750){
       setVisible(true)
     } 

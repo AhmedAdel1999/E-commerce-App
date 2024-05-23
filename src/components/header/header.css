@@ -1,0 +1,80 @@
+.main-header{
+    position: sticky;
+    z-index: 1000;
+    top: 0px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#fff;
+    padding: 5px 45px;
+    box-shadow:  0px 6px 12px -8px #222;
+}
+.logo{
+    height: 70px;
+    width: 100px;
+}
+.logo img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.toggeler{
+    font-size: 25px;
+    color: #1f2f98;
+    cursor: pointer;
+}
+.routes{
+    flex-grow: 1;
+    flex-basis: auto;
+    display: flex;
+    justify-content: flex-end;
+    transition: all 0.5s linear;
+    gap: 20px;
+}
+.routes a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: capitalize;
+    transition: all 0.3s linear;
+    height: min-content;
+    position: relative;
+    color: #fff;
+    background-color: #1ca7ec;
+    padding: 3px 12px;
+    border-radius: 0px 15px 15px 15px;
+}
+
+.routes a.active{
+    background-color: #1f2f98;
+}
+.routes a:hover{
+    background-color: #1f2f98;
+}
+.routes a svg{
+    font-size: 22px;
+    transform: translate(-3px,2px);
+}
+.routes a span{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    font-size: 14px;
+    transform: translate(15px,-28px);
+}
+@media(max-width:900px){
+    .routes{
+        flex-basis: 100%;
+        flex-direction: column;
+        overflow: hidden;
+        height: 0px;
+    }
+}

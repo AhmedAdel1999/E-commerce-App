@@ -1,0 +1,117 @@
+.cart-page{
+    flex-basis: 100%;
+    padding: 45px 45px 20px;
+    display: flex;
+    justify-content: center;
+}
+.no-items{
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    color: #1f2f98;
+}
+.main-cart-container{
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    gap: 20px;
+}
+.cart-header{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.cart-header div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.cart-header h3{
+    margin: 0px;
+    color: #1f2f98;
+}
+.cart-items{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.cart-item{
+    box-shadow: 0 0 15px #ddd;
+    background-color: #ebe9e9;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    border-radius: 5px;
+    padding: 20px
+}
+.cart-item .cart-img{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.cart-img img{
+    height: 100px;
+    width: 100px;
+}
+.cart-img div{
+    max-width: 200px;
+    width: 100%;
+}
+.cart-img div h4{
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100px;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.cart-img div p{
+    margin: 0px;
+    font-weight: bold;
+    color: #1f2f98;
+}
+.cart-actions{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+}
+.cart-actions p{
+    margin: 0px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.cart-quantity{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.cart-quantity svg{
+    cursor: pointer;
+}
+.cart-quantity span{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.cart-actions .delete-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    background-color: #1f2f98;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}

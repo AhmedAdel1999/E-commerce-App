@@ -1,0 +1,51 @@
+.auth{
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 45px;
+}
+.auth .auth-content{
+    min-width: 250px;
+    max-width: 450px;
+    width: 100%;
+    transform: translateY(-60px);
+}
+.auth-content .auth-header{
+    color: #1f2f98;
+    font-weight: bold;
+}
+
+.auth-content form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.auth-content form div input{
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #1f2f98;
+}
+.auth-content form div span{
+    color: red;
+    text-transform: capitalize
+}
+
+.redirect{
+    margin-top: 5px;
+    font-weight: bold;
+    color: #1ca7ec;
+}
+.redirect a{
+    text-decoration: none;
+    margin-left: 5px;
+    color: #1f2f98;
+}
+.redirect a:hover{
+    color: #1f2f98;
+}

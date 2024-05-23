@@ -1,58 +1,41 @@
-import React, { useEffect, useState } from 'react';
-import {BrowserRouter,Route,Switch} from "react-router-dom"
-import Products from './components/products/Products';
-import Login from './components/auth/Login';
-import Register from './components/auth/Register';
-import Navroute from './components/navroute/Navroute';
-import CreateProducts  from './components/createproduct/CreateProduct';
-import Cart from './components/cart/Cart';
-import ProductDetail from './components/productdetail/ProductDetail';
-import Categories from './components/category/Categories';
-import OrderHistory from './components/history/OrderHistory';
-import OrderDetails from './components/history/OrderDetails';
+import React from 'react';
+import { Route,Routes,BrowserRouter } from 'react-router-dom';
+import Cart from './pages/cartPage/Cart';
+import Login from './pages/authPage/Login';
+import Register from './pages/authPage/Register';
+import Products from './pages/productsPage/Products';
+import ProductDetail from './pages/productDetailPage/ProductDetail';
+import CreateProducts  from './pages/createproductPage/CreateProduct';
+import AllPayments from './pages/paymentpages/allPayments';
+import PaymentDetails from './pages/paymentpages/paymentDetails';
 import ScrollButton from './components/scrollbutton/scrollButton';
-import PageNotFound from './components/pagenotfound/PageNotFound';
-import { IsAdmin, IsLogged, GetConfig } from './components/utils/UserData';
-import { useDispatch, useSelector } from 'react-redux';
-import { userInfo } from './features/shop/userSlice';
+import PageNotFound from './pages/pagenotfound/PageNotFound';
+import ProtectedAdmin from './components/protectedAdmin';
+import ProtectedRoute from "./components/protectedRoute"
+import Navbar from './components/header/header';
 import './App.css';
 
 
-    const  App = () => {
-    const isLogged =  IsLogged()
-    const isAdmin=IsAdmin()
-    const config= GetConfig()
-    const dispatch = useDispatch();
-    const[AppHeight,setAppHeight]=useState(`100vh`)
-    const token = useSelector((state)=>state.user.token)
-    
-    useEffect(()=>{
-    const fun = async() =>{
-      if(token){
-        await dispatch(userInfo(config))
-      }
-    }
-    setAppHeight(`${window.innerHeight - 1}px`)
-    fun();
-    },[token])
+
+
+const  App = () => {    
   return (
-    <div className="App" style={{height:AppHeight}}>
+    <div className="App">
       <BrowserRouter>
-         <Navroute />
+         <Navbar />
          <ScrollButton />
-         <Switch>
-           <Route path="/" exact strict component={Products} />
-           <Route path="/register" exact strict component={Register} />
-           <Route path="/login" exact strict component={Login}/>
-           <Route path="/create" exact strict component={isAdmin?CreateProducts:PageNotFound}/>
-           <Route path="/edit/:id" exact strict component={isAdmin?CreateProducts:PageNotFound}/>
-           <Route path="/categories" exact strict component={isAdmin?Categories:PageNotFound}/>
-           <Route path="/history" exact strict component={isLogged?OrderHistory:PageNotFound}/>
-           <Route path="/history/:id" exact strict component={isLogged?OrderDetails:PageNotFound}/>
-           <Route path="/cart" exact strict component={isLogged?Cart:PageNotFound}/>
-           <Route path="/detail/:id" exact strict component={ProductDetail}/>
-           <Route path="*" component={PageNotFound} />
-         </Switch>
+         <Routes>
+           <Route path="/" element={<Products />} />
+           <Route path="/register" element={<Register />} />
+           <Route path="/login" element={<Login />}/>
+           <Route path="/createproduct" element={<ProtectedAdmin><CreateProducts /></ProtectedAdmin>} />
+           <Route path="/editproduct/:id" element={<ProtectedAdmin><CreateProducts /></ProtectedAdmin>} />
+           <Route path="/cart" element={<ProtectedRoute><Cart /></ProtectedRoute>}/>
+           <Route path="/payments" element={<ProtectedRoute><AllPayments /></ProtectedRoute>}/>
+           <Route path="/payment/:id" element={<ProtectedRoute><PaymentDetails /></ProtectedRoute>}/>
+           <Route path="/productdetails/:id" element={<ProductDetail />}/>
+           <Route path="*" element={<PageNotFound />} />
+         </Routes>
       </BrowserRouter>
     </div>
   );
